@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Sarra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pitch: #1f4d3a;
+    --chalk: #f3f1ea;
+    --ink: #1d2420;
+    --sun: #e0a12b;
+    --muted: #55605a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--chalk);
+    color: var(--ink);
+    font-family: "Work Sans", system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.25rem;
+  }
+  main {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .photo {
+    aspect-ratio: 4 / 5;
+    border-radius: 999px 999px 12px 12px;
+    background: var(--pitch);
+    border-bottom: 10px solid var(--sun);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    color: var(--chalk);
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    line-height: 1.1;
+    margin: 0 0 1.25rem;
+    color: var(--pitch);
+  }
+  p { margin: 0 0 1rem; max-width: 60ch; }
+  a.more {
+    display: inline-block;
+    margin-top: .75rem;
+    padding: .7rem 1.4rem;
+    background: var(--pitch);
+    color: var(--chalk);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 6px;
+    border-bottom: 3px solid var(--sun);
+  }
+  a.more:hover { background: var(--ink); }
+  a.more:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+  @media (max-width: 720px) {
+    main { grid-template-columns: 1fr; gap: 2rem; }
+    .photo { max-width: 260px; margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="photo" id="photo">
+    <!-- Replace photo.jpg with your own photo file (same folder as this page) -->
+    <img src="" alt="This is a picture of sarra jammeh sitting and chilling">
+  </div>
+
+  <section>
+    <h1>Hi, I'm Sarra.</h1>
+    <p>I'm based in the Gambia and work as an IT Officer at Afia Financial Services. Outside of that, I'm connected to Bistack, where we build POS systems and websites for businesses that want simple tools that work.</p>
+    <p>Football has been part of my life for a long time. I played in the Gambian first division, and today I help run Yakar Football School of Excellence, a community program that gives young players a place to train and grow.</p>
+    <a class="more" href="#">Learn more about me</a>
+  </section>
+</main>
+</body>
+</html>

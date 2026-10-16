@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yakar Football School of Excellence</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="logo">Yakar <span>FSE</span></div>
+  <div class="links" id="links">
+    <a data-p="home">Yakar</a><a data-p="about">About Us</a><a data-p="programs">Programs</a><a data-p="gallery">Gallery</a><a data-p="contact">Contact</a>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center"><a class="btn" data-p="join" style="padding:8px 16px;cursor:pointer">Register</a><button class="menu" id="mb">Menu</button></div>
+</div></nav>
+
+<main>
+<div class="page" id="p-home">
+<header class="hero"><div class="wrap">
+  <div class="eyebrow" style="color:var(--gold)">The Gambia &middot; Community Football</div>
+  <h1>Where talent becomes <em>excellence</em></h1>
+  <p>Yakar Football School of Excellence develops young Gambian players on and off the pitch, with real coaching, discipline and opportunity.</p>
+  <div class="row"><a class="btn gold" data-p="join" style="cursor:pointer">Apply as a player</a><a class="btn ghost" style="color:#fff;border-color:rgba(255,255,255,.5);cursor:pointer" data-p="join" data-role="coach">Join as a coach</a></div>
+</div></header>
+<section><div class="wrap">
+  <div class="eyebrow">Welcome to Yakar</div>
+  <h2>More than a football school</h2>
+  <p class="lead">Yakar means hope. We give players a structured place to train, compete and grow, and we run community football that opens doors for local talent.</p>
+  <div class="grid">
+    <div class="card"><div class="num">01</div><h3>Quality coaching</h3><p>Technique, fitness and game understanding.</p></div>
+    <div class="card"><div class="num">02</div><h3>Competitive play</h3><p>Matches and community tournaments.</p></div>
+    <div class="card"><div class="num">03</div><h3>Character first</h3><p>Discipline, teamwork and respect.</p></div>
+  </div>
+</div></section>
+</div>
+
+<div class="page" id="p-about"><section class="pg"><div class="wrap">
+  <div class="eyebrow">About us</div>
+  <h2>Built by football people, for the community</h2>
+  <p class="lead">Yakar Football School of Excellence is run by people who know the Gambian game from the inside, including players with first division experience. We believe talent is everywhere in the Gambia and what many young players lack is structure, coaching and a platform.</p>
+  <div class="grid">
+    <div class="card"><h3>Our mission</h3><p>To develop disciplined, skilled players and good people through quality football education.</p></div>
+    <div class="card"><h3>Our vision</h3><p>A Gambia where every talented young player has a clear pathway to grow.</p></div>
+    <div class="card"><h3>Our values</h3><p>Respect, hard work, teamwork and community.</p></div>
+  </div>
+</div></section></div>
+
+<div class="page" id="p-programs"><section class="pg"><div class="wrap">
+  <div class="eyebrow">Programs</div>
+  <h2>Find your place</h2>
+  <div class="grid">
+    <div class="card"><h3>Youth Academy</h3><p>Foundation training for younger players learning the game properly.</p></div>
+    <div class="card"><h3>Senior Development</h3><p>Advanced training for older players aiming for higher-level football.</p></div>
+    <div class="card"><h3>Community Tournaments</h3><p>Organised competitions where players and teams test themselves.</p></div>
+    <div class="card"><h3>Coaches' Programme</h3><p>Opportunities for coaches and assistants to join our technical team.</p></div>
+  </div>
+  <p style="margin-top:28px"><a class="btn" data-p="join" style="cursor:pointer">Register now</a></p>
+</div></section></div>
+
+<div class="page" id="p-gallery"><section class="pg"><div class="wrap">
+  <div class="eyebrow">Gallery</div>
+  <h2>Life at Yakar</h2>
+  <p class="lead">Training, matchdays and tournaments. Photos coming soon.</p>
+  <div class="gal"><div class="ph">Training</div><div class="ph">Matchday</div><div class="ph">Tournament</div><div class="ph">Our players</div><div class="ph">Our coaches</div><div class="ph">Community</div></div>
+</div></section></div>
+
+<div class="page" id="p-contact"><section class="pg"><div class="wrap cbox">
+  <div class="eyebrow">Contact</div>
+  <h2>Get in touch</h2>
+  <p class="lead">Questions about joining, partnerships or sponsorship? Send us a message.</p>
+  <form id="cf" onsubmit="return false" style="margin-top:22px">
+    <div><label for="cn">Your name</label><input id="cn" required></div>
+    <div><label for="cp">Phone / email</label><input id="cp" required></div>
+    <div class="full"><label for="cm">Message</label><textarea id="cm" required></textarea></div>
+    <div class="full"><button class="btn" type="submit">Send message</button></div>
+  </form>
+  <div id="cres" class="msg hide"></div>
+</div></section></div>
+
+<div class="page" id="p-join"><section class="pg"><div class="wrap">
+  <div class="eyebrow">Join Yakar FSE</div>
+  <h2>Apply &amp; register online</h2>
+  <p class="lead">Choose your role, fill in the form and our team will contact you.</p>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t-player" aria-selected="true" onclick="setTab('player')">Player</button>
+    <button class="tab" role="tab" id="t-coach" aria-selected="false" onclick="setTab('coach')">Coach</button>
+  </div>
+  <form id="f" onsubmit="return false">
+    <div><label for="name">Full name</label><input id="name" required></div>
+    <div><label for="dob">Date of birth</label><input id="dob" type="date" required></div>
+    <div><label for="phone">Phone / WhatsApp</label><input id="phone" type="tel" required></div>
+    <div><label for="email">Email (optional)</label><input id="email" type="email"></div>
+    <div class="full"><label for="addr">Town / area</label><input id="addr" placeholder="e.g. Abuko, Brikama, Serrekunda"></div>
+    <div class="p"><label for="pos">Position</label>
+      <select id="pos"><option>Goalkeeper</option><option>Defender</option><option>Midfielder</option><option>Forward</option></select></div>
+    <div class="p"><label for="foot">Preferred foot</label><select id="foot"><option>Right</option><option>Left</option><option>Both</option></select></div>
+    <div class="p full"><label for="club">Previous club / team (if any)</label><input id="club"></div>
+    <div class="p full"><label for="guardian">Parent / guardian name &amp; phone (for under 18)</label><input id="guardian"></div>
+    <div class="c"><label for="lic">Coaching licence / level</label><input id="lic" placeholder="e.g. CAF C, none yet"></div>
+    <div class="c"><label for="yrs">Years of coaching</label><input id="yrs" type="number" min="0"></div>
+    <div class="full"><label for="note" id="notelbl">Tell us about yourself</label><textarea id="note"></textarea></div>
+    <div class="full"><button class="btn" id="go" type="submit">Submit application</button></div>
+  </form>
+  <div id="res" class="msg hide"></div>
+</div></section></div>
+</main>
+
+<footer><div class="wrap">&copy; Yakar Football School of Excellence &middot; The Gambia</div></footer>
+
+<script>
+var role='player';
+function setTab(r){
+  role=r;
+  document.getElementById('t-player').setAttribute('aria-selected',r==='player');
+  document.getElementById('t-coach').setAttribute('aria-selected',r==='coach');
+  document.querySelectorAll('.p').forEach(function(e){e.classList.toggle('hide',r!=='player')});
+  document.querySelectorAll('.c').forEach(function(e){e.classList.toggle('hide',r!=='coach')});
+  document.getElementById('notelbl').textContent=r==='player'?'Tell us about yourself and your football goals':'Tell us about your coaching experience';
+}
+setTab('player');
+function go(p,role){
+  if(!document.getElementById('p-'+p))p='home';
+  document.querySelectorAll('.page').forEach(function(e){e.classList.toggle('on',e.id==='p-'+p)});
+  document.querySelectorAll('#links a').forEach(function(a){a.classList.toggle('on',a.dataset.p===p)});
+  document.getElementById('links').classList.remove('open');
+  if(role)setTab(role);
+  window.scrollTo(0,0);
+}
+document.addEventListener('click',function(e){var a=e.target.closest('[data-p]');if(a){e.preventDefault();var p=a.dataset.p;history.replaceState(null,'','#'+p);go(p,a.dataset.role)}});
+document.getElementById('mb').onclick=function(){document.getElementById('links').classList.toggle('open')};
+go((location.hash||'#home').slice(1));
+var dbp=null;
+try{ if(window.claude&&claude.use){ dbp=claude.use('db').catch(function(){return null}); } }catch(e){}
+function v(id){return document.getElementById(id).value.trim()}
+function show(cls,html){var r=document.getElementById('res');r.className='msg '+cls;r.innerHTML=html}
+document.getElementById('f').addEventListener('submit',async function(){
+  var f=document.getElementById('f');
+  if(!f.reportValidity())return;
+  var app={role:role,name:v('name'),dob:v('dob'),phone:v('phone'),email:v('email'),area:v('addr'),note:v('note'),submitted:new Date().toISOString()};
+  if(role==='player'){app.position=v('pos');app.foot=v('foot');app.club=v('club');app.guardian=v('guardian')}
+  else{app.licence=v('lic');app.years=v('yrs')}
+  var btn=document.getElementById('go');btn.disabled=true;btn.textContent='Sending...';
+  var saved=false;
+  try{
+    var db=dbp?await dbp:null;
+    if(db){
+      var u=await claude.use('user');
+      var uid=await u.id();
+      var ref=db.collection('applications').doc(uid);
+      var rec={};rec[role]=app;
+      try{await ref.update(rec)}catch(e2){await ref.set(rec)}
+      saved=true;
+    }
+  }catch(e){}
+  btn.disabled=false;btn.textContent='Submit application';
+  if(saved){
+    show('ok','<strong>Application received.</strong> Thank you, '+app.name.replace(/[<>&]/g,'')+'! The Yakar FSE team will contact you on '+app.phone.replace(/[<>&]/g,'')+'.');
+    f.reset();setTab(role);
+  }else{
+    var txt='Yakar FSE '+role+' application\n'+Object.keys(app).map(function(k){return k+': '+app[k]}).join('\n');
+    show('warn','<strong>We could not save online right now.</strong> Please copy your details and send them to the academy directly.<br><br><button class="btn ghost" id="copybtn">Copy my application</button>');
+    document.getElementById('copybtn').onclick=function(){try{navigator.clipboard.writeText(txt);this.textContent='Copied'}catch(e){this.textContent='Copy failed'}};
+  }
+});
+document.getElementById('cf').addEventListener('submit',async function(){
+  var f=document.getElementById('cf');
+  if(!f.reportValidity())return;
+  var m={name:document.getElementById('cn').value.trim(),contact:document.getElementById('cp').value.trim(),message:document.getElementById('cm').value.trim(),sent:new Date().toISOString()};
+  var r=document.getElementById('cres'),ok=false;
+  try{
+    var db=dbp?await dbp:null;
+    if(db){
+      var u=await claude.use('user');var uid=await u.id();
+      var ref=db.collection('applications').doc(uid),rec={contact:m};
+      try{await ref.update(rec)}catch(e2){await ref.set(rec)}
+      ok=true;
+    }
+  }catch(e){}
+  r.className='msg '+(ok?'ok':'warn');
+  r.textContent=ok?'Message sent. Thank you, we will get back to you soon.':'We could not send your message online right now. Please try again later.';
+  if(ok)f.reset();
+});
+</script>
+</body>
+</html>
+</body>
+</html>
