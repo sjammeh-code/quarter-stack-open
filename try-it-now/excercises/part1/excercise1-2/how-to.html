@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to open a bank account</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f5f8f7;
+    --surface: #ffffff;
+    --ink: #10242b;
+    --muted: #4c6169;
+    --line: #cfdcd9;
+    --accent: #0c6b5a;
+    --mark: #f3c04a;
+    --note: #e6f1ee;
+    box-sizing: border-box;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0e1b20;
+      --surface: #14262d;
+      --ink: #e8f0ee;
+      --muted: #a3b8b4;
+      --line: #28414a;
+      --accent: #5fd3b8;
+      --mark: #e0ad33;
+      --note: #173238;
+    }
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.65;
+  }
+  a { color: var(--accent); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 1.25rem; }
+
+  header.top { padding: 4rem 0 2.5rem; border-bottom: 1px solid var(--line); }
+  h1 {
+    font-size: clamp(2.4rem, 6.5vw, 4.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.25rem;
+    max-width: 14ch;
+  }
+  .lede { max-width: 60ch; font-size: 1.25rem; color: var(--muted); margin: 0; }
+
+  section { padding: 3rem 0 0.5rem; }
+  h2 { font-size: clamp(1.6rem, 4vw, 2.1rem); line-height: 1.2; margin: 0 0 0.75rem; letter-spacing: -0.01em; }
+  h3 { font-size: 1.3rem; line-height: 1.3; margin: 0 0 0.5rem; }
+  p { margin: 0 0 1rem; max-width: 62ch; }
+
+  .pair { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 1.25rem; }
+  .pair article { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.1rem 1.2rem 0.3rem; }
+
+  .checklist { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.75rem; max-width: 62ch; }
+  .checklist label {
+    display: grid; grid-template-columns: 1.6rem 1fr; gap: 0.85rem; align-items: start;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 0.9rem 1rem; cursor: pointer;
+  }
+  .checklist input { width: 1.4rem; height: 1.4rem; margin: 0.2rem 0 0; accent-color: var(--accent); }
+  .checklist input:checked + span { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1px; }
+  .checklist small { display: block; color: var(--muted); font-size: 0.95rem; }
+
+  ol.steps { list-style: none; margin: 1.75rem 0 0; padding: 0; counter-reset: step; }
+  ol.steps > li {
+    counter-increment: step;
+    display: grid; grid-template-columns: 4.5rem 1fr; gap: 0 1rem;
+    position: relative; padding-bottom: 2.5rem;
+  }
+  ol.steps > li::before {
+    content: counter(step);
+    font-weight: 700; color: var(--accent);
+    width: 3.6rem; height: 3.6rem; display: grid; place-items: center;
+    border: 3px solid var(--accent); border-radius: 50%; font-size: 1.7rem; line-height: 1;
+    background: var(--paper); position: relative; z-index: 1;
+  }
+  ol.steps > li::after {
+    content: ""; position: absolute; left: 1.8rem; top: 3.6rem; bottom: 0; width: 3px; background: var(--line);
+  }
+  ol.steps > li:last-child::after { display: none; }
+  ol.steps > li:last-child { padding-bottom: 0.5rem; }
+  .step-body { padding-top: 0.5rem; }
+  .step-body ul { margin: 0 0 1rem; padding-left: 1.25rem; max-width: 60ch; }
+  .step-body li { margin-bottom: 0.35rem; }
+
+  .tip {
+    background: var(--note); border-left: 6px solid var(--mark);
+    padding: 0.9rem 1.1rem; border-radius: 0 10px 10px 0; max-width: 62ch; margin: 1rem 0 0;
+  }
+  .tip strong { display: block; }
+
+  .after-list { margin: 0 0 1rem; padding-left: 1.25rem; max-width: 60ch; }
+
+  footer { margin-top: 3.5rem; padding: 1.75rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 1rem; }
+
+  @media (max-width: 560px) {
+    body { font-size: 1.05rem; }
+    ol.steps > li { grid-template-columns: 3.2rem 1fr; gap: 0 0.75rem; }
+    ol.steps > li::before { width: 2.8rem; height: 2.8rem; font-size: 1.3rem; }
+    ol.steps > li::after { left: 1.3rem; top: 2.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <h1>How to open a bank account</h1>
+    <p class="lede">A plain guide for first-timers. It explains what to prepare, what to bring, what happens at the bank, and what to do once your account is open.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section aria-labelledby="before-h">
+    <h2 id="before-h">Before you go</h2>
+    <p>A little preparation saves you a second trip. Decide which bank suits you and which kind of account you need, then call or visit the branch to ask for its account opening checklist.</p>
+    <div class="pair">
+      <article>
+        <h3>Choose a bank</h3>
+        <p>Compare two or three banks. Look at monthly fees, the minimum balance, how close the branch is, and whether they offer a mobile app or a card.</p>
+      </article>
+      <article>
+        <h3>Choose an account type</h3>
+        <p>A savings account is for keeping money safe and may earn interest. A current account is for everyday payments and business use, with fewer limits but usually higher fees.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="bring-h">
+    <h2 id="bring-h">What to bring</h2>
+    <p>Banks must confirm who you are before they open an account. This identity check is often called “know your customer”, or KYC, and it is required by law. Tick each item off as you collect it.</p>
+    <ul class="checklist">
+      <li><label><input type="checkbox"><span>Valid photo ID<small>A national ID card, passport, or driver’s licence. It must not be expired.</small></span></label></li>
+      <li><label><input type="checkbox"><span>Proof of where you live<small>A recent utility bill, a tenancy agreement, or a letter from your employer or community leader.</small></span></label></li>
+      <li><label><input type="checkbox"><span>Passport-size photographs<small>Usually two. Bring a few extra in case the bank asks.</small></span></label></li>
+      <li><label><input type="checkbox"><span>Money for the first deposit<small>Many accounts need a minimum amount to open. Ask the bank how much.</small></span></label></li>
+      <li><label><input type="checkbox"><span>Your phone number and a second contact<small>The bank uses these to reach you and to send alerts.</small></span></label></li>
+      <li><label><input type="checkbox"><span>Proof of income, if you have it<small>A work letter or payslip. Some account types ask for it and some do not.</small></span></label></li>
+    </ul>
+    <div class="tip">
+      <strong>Check that your name matches.</strong>
+      Your name should be spelled the same way on every document. A mismatch is the most common reason for delays.
+    </div>
+  </section>
+
+  <section aria-labelledby="office-h">
+    <h2 id="office-h">At the office</h2>
+    <p>Go early in the morning, when queues are shorter. Tell the customer service desk that you would like to open a new account, and they will guide you through three stages.</p>
+    <ol class="steps">
+      <li>
+        <div class="step-body">
+          <h3>Fill in the application form</h3>
+          <p>Write clearly, using your full legal name, and answer every question unless the form says it is optional.</p>
+          <ul>
+            <li>You may be asked to name a next of kin, a person the bank can contact if something happens to you.</li>
+            <li>You may be asked for a sample signature, which the bank keeps to check future withdrawals.</li>
+            <li>Read the fees page before you sign.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h3>Wait for verification</h3>
+          <p>The bank copies your documents and checks your identity. Some branches finish this while you wait, and others take a few working days, so ask when you should expect to hear back.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <h3>Make your first deposit</h3>
+          <p>Once you are approved, pay in your opening deposit at the counter and keep the receipt. You will be given your account number, so check that it matches your paperwork and write it down somewhere safe.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="after-h">
+    <h2 id="after-h">After you open the account</h2>
+    <p>Depending on the bank, you will receive a debit card, a passbook or chequebook, and sign-up details for mobile or internet banking. A few habits keep your money safe from the start.</p>
+    <ul class="after-list">
+      <li>Choose a PIN that is not your birthday or phone number.</li>
+      <li>Never share your PIN or password, and never write them on the card.</li>
+      <li>Ask the staff to switch on SMS alerts so you see every transaction.</li>
+      <li>Make one small deposit or withdrawal to confirm everything works.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>This page gives general guidance. Rules and documents vary by bank and by country, so confirm the details with your chosen branch before you go.</p>
+  </div>
+</footer>
+
+</body>
+</html>
