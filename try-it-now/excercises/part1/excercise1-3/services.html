@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanneh Tailoring, Brikama: services and prices</title>
+<meta name="description" content="Made-to-measure clothing, alterations and repairs in Brikama, The Gambia. See what we make and what it costs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f2ee;
+    --card: #ffffff;
+    --ink: #1b2340;
+    --muted: #55607a;
+    --line: #d9d6cf;
+    --thread: #c8362f;
+    --indigo: #232d5c;
+    --on-indigo: #f4f2ee;
+    box-sizing: border-box;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121629;
+      --card: #1a2040;
+      --ink: #eceaf4;
+      --muted: #a4abc4;
+      --line: #2e3560;
+      --thread: #ff7a70;
+      --indigo: #0d1124;
+      --on-indigo: #eceaf4;
+    }
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  :focus-visible { outline: 3px solid var(--thread); outline-offset: 3px; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
+
+  header.hero { background: var(--indigo); color: var(--on-indigo); padding: 3.5rem 0 3rem; position: relative; }
+  header.hero::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 14px;
+    border-bottom: 3px dashed var(--thread); opacity: 0.9;
+  }
+  h1 {
+    font-family: "DM Serif Display", Georgia, "Times New Roman", serif;
+    font-weight: 400; font-size: clamp(2.5rem, 8vw, 4.4rem); line-height: 1.02; margin: 0 0 1rem;
+  }
+  .intro { max-width: 56ch; font-size: 1.2rem; margin: 0 0 1.5rem; opacity: 0.95; }
+  .stamp { display: inline-block; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.04em; text-transform: uppercase; border: 2px solid var(--thread); color: var(--on-indigo); padding: 0.3rem 0.8rem; border-radius: 4px; margin: 0; }
+
+  section { padding: 3rem 0 0.5rem; }
+  h2 { font-family: "DM Serif Display", Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(1.8rem, 5vw, 2.4rem); line-height: 1.15; margin: 0 0 0.6rem; }
+  p { margin: 0 0 1rem; max-width: 60ch; }
+  .sec-note { color: var(--muted); }
+
+  ul, ol { max-width: 640px; }
+  .prices { list-style: none; margin: 1.25rem 0 0; padding: 0; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 0.4rem 1.25rem; }
+  .prices > li { padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
+  .prices > li:last-child { border-bottom: 0; }
+  .prices .cat { font-weight: 700; display: block; margin-bottom: 0.25rem; }
+  .prices ul { list-style: none; padding: 0; margin: 0.25rem 0 0; }
+  .row { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.2rem 0; }
+  .row .name { flex: 0 1 auto; }
+  .row .dots { flex: 1 1 1rem; border-bottom: 2px dotted var(--line); transform: translateY(-4px); min-width: 1rem; }
+  .row .price { flex: 0 0 auto; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .detail { color: var(--muted); font-size: 0.95rem; display: block; }
+
+  ol.process { list-style: none; counter-reset: s; margin: 1.25rem 0 0; padding: 0; }
+  ol.process > li { counter-increment: s; position: relative; padding: 0 0 1.25rem 3.4rem; }
+  ol.process > li::before {
+    content: counter(s); position: absolute; left: 0; top: 0;
+    width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--thread); color: #fff;
+    display: grid; place-items: center; font-weight: 700;
+  }
+  ol.process strong { display: block; }
+
+  .facts { list-style: none; margin: 1.25rem 0 0; padding: 0; display: grid; gap: 0.6rem; }
+  .facts li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 0.7rem 1rem; }
+
+  footer { margin-top: 3rem; padding: 1.5rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; }
+  footer p { margin: 0; }
+
+  @media (max-width: 520px) {
+    body { font-size: 1.05rem; }
+    .prices { padding: 0.3rem 0.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Jammeh Tailoring</h1>
+    <p class="intro">We sew clothes to your measurements and fix the ones you already own. Find us in Brikama, in the Western Region of The Gambia, where we make everyday wear, ceremony outfits and school uniforms.</p>
+    <p class="stamp">Made to measure &middot; Repairs &middot; Alterations</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section aria-labelledby="made-h">
+    <h2 id="made-h">Made-to-measure clothing</h2>
+    <p>Every piece is cut and sewn for you, using your own fabric or fabric we help you choose. Prices below are for labour, starting from the amount shown.</p>
+    <ul class="prices">
+      <li>
+        <span class="cat">Men’s wear</span>
+        <ul>
+          <li class="row"><span class="name">Shirt</span><span class="dots"></span><span class="price">from D600</span></li>
+          <li class="row"><span class="name">Trousers</span><span class="dots"></span><span class="price">from D700</span></li>
+          <li class="row"><span class="name">Kaftan</span><span class="dots"></span><span class="price">from D1,200</span></li>
+          <li class="row"><span class="name">Two-piece suit</span><span class="dots"></span><span class="price">from D3,500</span></li>
+        </ul>
+      </li>
+      <li>
+        <span class="cat">Women’s wear</span>
+        <ul>
+          <li class="row"><span class="name">Skirt</span><span class="dots"></span><span class="price">from D500</span></li>
+          <li class="row"><span class="name">Dress</span><span class="dots"></span><span class="price">from D900</span></li>
+          <li class="row"><span class="name">Boubou</span><span class="dots"></span><span class="price">from D1,500</span></li>
+          <li class="row"><span class="name">Ceremony outfit</span><span class="dots"></span><span class="price">from D2,500</span></li>
+        </ul>
+      </li>
+      <li>
+        <span class="cat">School uniforms</span>
+        <ul>
+          <li class="row"><span class="name">Shirt or blouse</span><span class="dots"></span><span class="price">from D350</span></li>
+          <li class="row"><span class="name">Trousers, skirt or pinafore</span><span class="dots"></span><span class="price">from D450</span></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="alter-h">
+    <h2 id="alter-h">Alterations and repairs</h2>
+    <p>Bring in clothes that no longer fit or have worn out. Most small jobs are ready within two days.</p>
+    <ul class="prices">
+      <li class="row"><span class="name">Shorten or lengthen a hem</span><span class="dots"></span><span class="price">D100</span></li>
+      <li class="row"><span class="name">Shorten sleeves</span><span class="dots"></span><span class="price">D150</span></li>
+      <li class="row"><span class="name">Take in or let out at the waist or sides</span><span class="dots"></span><span class="price">D200</span></li>
+      <li class="row"><span class="name">Replace a zip</span><span class="dots"></span><span class="price">D150</span></li>
+      <li class="row"><span class="name">Mend a tear or re-stitch a seam</span><span class="dots"></span><span class="price">from D80</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="how-h">
+    <h2 id="how-h">How an order works</h2>
+    <p>A made-to-measure order follows the same five steps every time, so you always know what comes next.</p>
+    <ol class="process">
+      <li><strong>Tell us what you want</strong>Come to the shop with your fabric, or a photo of the style you like.</li>
+      <li><strong>We take your measurements</strong>This takes about ten minutes, and we write them in your own record.</li>
+      <li><strong>Pay a deposit</strong>Half the labour price secures your order and starts the cutting.</li>
+      <li><strong>Come for a fitting</strong>For suits and ceremony outfits we check the fit before the final stitching.</li>
+      <li><strong>Collect and pay the balance</strong>Most orders take five to seven working days. Rush orders in two to three days cost 25% extra.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit the shop</h2>
+    <p>Walk in any time during opening hours. You do not need to book, but call ahead if you have a deadline such as a wedding or the start of term.</p>
+    <ul class="facts">
+      <li><strong>Where:</strong> Brikama, Western Region, The Gambia</li>
+      <li><strong>Open:</strong> Monday to Saturday, 8:30 am to 6:00 pm</li>
+      <li><strong>Closed:</strong> Sundays and public holidays</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Prices are in Gambian dalasi (D) and are a guide. Final prices depend on the style and fabric, and we always agree the price with you before we start.</p>
+  </div>
+</footer>
+
+</body>
+</html>
