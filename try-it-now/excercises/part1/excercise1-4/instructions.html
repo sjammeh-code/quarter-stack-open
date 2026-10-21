@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>How to run a petrol generator safely</title>
+<style>
+  :root {
+    --ink: #000000;
+    --paper: #ffffff;
+    --warn: #ffd400;
+    --soft: #f2f2f2;
+    color-scheme: light;
+    box-sizing: border-box;
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  body {
+    margin: 0;
+    background: #e9e9e9;
+    color: var(--ink);
+    font-family: Arial, Helvetica, "Liberation Sans", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.45;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 6px solid var(--ink);
+    padding: 1.5rem 1.75rem 1.75rem;
+  }
+  .stripe {
+    height: 16px;
+    margin: -1.5rem -1.75rem 1.25rem;
+    background: repeating-linear-gradient(-45deg, var(--ink) 0 16px, var(--warn) 16px 32px);
+  }
+  h1 {
+    font-size: clamp(2rem, 6vw, 2.9rem);
+    line-height: 1.05;
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin: 1.4rem 0 0.4rem;
+    padding: 0.25rem 0.6rem;
+    background: var(--ink);
+    color: var(--paper);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  p { margin: 0 0 0.5rem; }
+  ul, ol { margin: 0.25rem 0 0; padding-left: 1.4rem; }
+  li { margin-bottom: 0.35rem; }
+
+  ol.steps { list-style: none; counter-reset: step; padding-left: 0; }
+  ol.steps > li {
+    counter-increment: step;
+    position: relative;
+    padding: 0.4rem 0.5rem 0.4rem 3rem;
+    border-bottom: 1px solid #bbb;
+    margin: 0;
+  }
+  ol.steps > li:last-child { border-bottom: 0; }
+  ol.steps > li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: 0.3rem;
+    width: 2.2rem; height: 2.2rem;
+    display: grid; place-items: center;
+    background: var(--ink); color: var(--paper);
+    font-weight: 700; font-size: 1.25rem; border-radius: 50%;
+  }
+
+  strong { font-weight: 900; text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 3px; }
+  em { font-style: italic; font-weight: 700; }
+  abbr[title] { text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; }
+
+  .problem {
+    border: 4px solid var(--ink);
+    background: var(--soft);
+    padding: 0.7rem 0.9rem;
+    margin: 0.4rem 0 0;
+  }
+  .blank { display: inline-block; min-width: 9rem; border-bottom: 2px solid var(--ink); height: 1em; vertical-align: baseline; }
+
+  @page { size: A4; margin: 10mm; }
+  @media print {
+    body { background: #fff; font-size: 11pt; line-height: 1.32; }
+    .sheet { border-width: 4px; max-width: none; padding: 4mm 6mm 5mm; }
+    .stripe { margin: -4mm -6mm 4mm; height: 9px; }
+    h1 { font-size: 24pt; margin-bottom: 2mm; }
+    h2 { font-size: 13pt; margin: 4mm 0 1.5mm; }
+    li { margin-bottom: 1mm; }
+    ol.steps > li { padding: 1.2mm 0 1.2mm 9mm; }
+    ol.steps > li::before { width: 6.5mm; height: 6.5mm; font-size: 10pt; top: 1mm; }
+    .problem { background: #fff; padding: 2.5mm 3mm; }
+    abbr[title] { text-decoration: none; }
+    abbr[title]::after { content: " (" attr(title) ")"; font-size: 0.85em; font-weight: 400; }
+    .sheet, ol.steps > li, .problem { break-inside: avoid; }
+  }
+  @media (max-width: 520px) {
+    body { font-size: 1.1rem; }
+    .sheet { border-width: 4px; padding: 1.25rem 1rem 1.5rem; }
+    .stripe { margin: -1.25rem -1rem 1rem; }
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <div class="stripe" aria-hidden="true"></div>
+
+  <h1>How to run a petrol generator safely</h1>
+  <p>This sheet is for anyone who starts the household or shop generator during a power cut. Read it every time you switch the generator on, because a mistake can cause a fire, an electric shock or fatal poisoning from exhaust fumes.</p>
+
+  <h2>What you need</h2>
+  <ul>
+    <li>A generator in good working order, with its rating plate still readable</li>
+    <li>Fresh petrol in a closed, labelled fuel can, stored away from the generator</li>
+    <li>Engine oil, for topping up</li>
+    <li>A heavy-duty outdoor extension cord with no cuts or damage</li>
+    <li>A fire extinguisher or a bucket of dry sand within reach</li>
+    <li>A dry, level spot outside with a roof that is open on all sides</li>
+    <li>A torch, so you never need a candle near fuel</li>
+    <li>A battery-powered <abbr title="carbon monoxide">CO</abbr> alarm in the rooms nearest the generator, if you have one</li>
+  </ul>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li>Carry the generator <strong>outside</strong>. Put it at least 6 <abbr title="metres">m</abbr> from every door, window and vent, on dry, level ground under a roof that is open on all sides.</li>
+    <li>With the engine <strong>off</strong>, check the fuel and oil levels. Top up if needed and wipe up any spills.</li>
+    <li>Switch off and unplug every appliance, so the generator starts with nothing connected.</li>
+    <li>Start the engine as shown in the manual: fuel tap on, choke set, then pull the cord or press the start button.</li>
+    <li>Let it run for 2 <abbr title="minutes">min</abbr> until the engine sounds steady. Plug in the extension cord only <strong>after</strong> that.</li>
+    <li>Plug in appliances one at a time, biggest first, and keep the total below the output on the rating plate (shown in <abbr title="kilovolt-amperes">kVA</abbr> or <abbr title="watts">W</abbr>). Plug into the extension cord only. <em>Never</em> plug the generator into a wall socket, because it sends power back down the line and can kill the people repairing it.</li>
+    <li>To refuel, unplug the appliances and switch the engine <strong>off</strong>. Wait 15 <abbr title="minutes">min</abbr> for it to cool <strong>before</strong> you open the fuel cap, then restart from step 4.</li>
+    <li>To finish, unplug every appliance <strong>before</strong> you switch the engine off. Then close the fuel tap and let it cool completely before you move or store it.</li>
+  </ol>
+
+  <h2>If something goes wrong</h2>
+  <p class="problem">If anyone feels dizzy, has a headache, feels sick or becomes weak while the generator is running, switch it off, get everyone into fresh air straight away and call for help, because <abbr title="carbon monoxide">CO</abbr> has no smell and can kill quickly. If fuel catches fire, never throw water on it; use the extinguisher or smother it with sand, and if the fire spreads, leave and call the fire service. If someone is getting an electric shock, switch the engine off before you touch them. Local emergency number: <span class="blank"></span></p>
+</main>
+</body>
+</html>
