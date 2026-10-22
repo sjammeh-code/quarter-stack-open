@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serrekunda Tailoring Shop: services, prices and opening hours</title>
+    <meta
+      name="description"
+      content="Serrekunda Tailoring Shop has made custom suits, traditional wear and alterations since 1985. See our services, prices and opening hours."
+    />
+    <style>
+      :root {
+        --ink: #1f2430;
+        --paper: #faf8f5;
+        --accent: #7a1f2b;
+        --line: #ddd6cc;
+        box-sizing: border-box;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Arial,
+          sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
+      header {
+        background: var(--accent);
+        color: #fff;
+        padding: 2.5rem 0;
+      }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        line-height: 1.1;
+        margin: 0 0 0.75rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+        color: var(--accent);
+        margin: 0 0 0.5rem;
+      }
+      section {
+        padding: 2rem 0 0.25rem;
+      }
+      p {
+        margin: 0 0 1rem;
+      }
+      ul {
+        padding-left: 1.4rem;
+        margin: 0 0 1rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 0 1rem;
+      }
+      caption {
+        text-align: left;
+        font-weight: 700;
+        padding-bottom: 0.4rem;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 0.6rem 0.5rem;
+        border-bottom: 1px solid var(--line);
+      }
+      td:last-child,
+      th:last-child {
+        text-align: right;
+        white-space: nowrap;
+      }
+      footer {
+        margin-top: 2rem;
+        padding: 1.25rem 0 2rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.95rem;
+      }
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1>Serrekunda Tailoring Shop</h1>
+        <p>
+          Quality you can trust. We make custom suits and traditional wear, and
+          we alter and repair clothes, in Serrekunda.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- TODO: add a photo of the shop here once the owner supplies one. Describe what the photo actually shows in the alt text. The original page pointed at shop.jpg, which was not supplied, so it was removed instead of leaving a broken image. -->
+
+      <section aria-labelledby="about-h">
+        <h2 id="about-h">About us</h2>
+        <p>
+          We have served the Serrekunda community since 1985, making and mending
+          clothes for everyday wear and special occasions.
+        </p>
+        <!-- Dates are written as "since 1985" so the page never goes stale. The original hard-coded "over three decades", which stops being accurate each year. -->
+        <!-- TODO: the original claimed "award-winning" and "2,000 satisfied customers". Neither could be checked, so both were removed. Add them back only with the award's name and year, or a customer count the owner can stand behind. -->
+      </section>
+
+      <section aria-labelledby="services-h">
+        <h2 id="services-h">Our services</h2>
+        <p>These are the jobs we take on.</p>
+        <ul>
+          <li>Custom suits</li>
+          <li>Dress alterations</li>
+          <li>Traditional wear</li>
+          <li>Repairs and mending</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="pricing-h">
+        <h2 id="pricing-h">Prices</h2>
+        <p>
+          These prices are a guide. Final prices depend on the style and the
+          job.
+        </p>
+        <!-- TODO: confirm the currency with the owner. The original used "$", which is unusual for a shop in Serrekunda, so the figures below may be wrong as well as the symbol. -->
+        <table>
+          <caption>
+            Starting prices
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Service</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Custom suit</td>
+              <td>$250.00</td>
+            </tr>
+            <tr>
+              <td>Alterations</td>
+              <td>from $20.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <strong
+            >A 50% deposit is required on all custom orders and is
+            non-refundable.</strong
+          >
+        </p>
+      </section>
+
+      <section aria-labelledby="hours-h">
+        <h2 id="hours-h">Opening hours</h2>
+        <p>You can visit the shop at these times.</p>
+        <ul>
+          <li>Monday to Friday: 9:00 am to 5:00 pm</li>
+          <li>Saturday and Sunday: closed</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="contact-h">
+        <h2 id="contact-h">Contact us</h2>
+        <p>Visit us in Serrekunda during opening hours.</p>
+        <!-- TODO: add the shop's real phone number as <a href="tel:+220..."> and its real email as <a href="mailto:...">. The original had (555) 123-4567 and info@tailoringshop.com, which are placeholders and would send customers nowhere. -->
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>Serrekunda Tailoring Shop, Serrekunda.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Serrekunda Tailoring Shop: services and opening hours</title>
+    <meta
+      name="description"
+      content="Serrekunda Tailoring Shop in Serrekunda, The Gambia, has been open since 1985. Custom suits, dress alterations, traditional wear, repairs and mending."
+    />
+    <style>
+      /* System fonts only, so the page loads quickly on a weak mobile connection. */
+      :root {
+        --ink: #1f2430;
+        --paper: #faf8f5;
+        --accent: #7a1f2b;
+        --line: #ddd6cc;
+        --alert: #fff3cd;
+        box-sizing: border-box;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Arial,
+          sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
+      header {
+        background: var(--accent);
+        color: #fff;
+        padding: 2.5rem 0;
+      }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        line-height: 1.1;
+        margin: 0 0 0.75rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+        color: var(--accent);
+        margin: 0 0 0.5rem;
+      }
+      section {
+        padding: 2rem 0 0.25rem;
+      }
+      p {
+        margin: 0 0 1rem;
+      }
+      ul {
+        padding-left: 1.4rem;
+        margin: 0 0 1rem;
+      }
+      /* The warning box repeats what the strong tag already says, so the message survives if a reader's browser strips CSS. */
+      .warning {
+        background: var(--alert);
+        border-left: 8px solid var(--accent);
+        padding: 0.8rem 1rem;
+      }
+      footer {
+        margin-top: 2rem;
+        padding: 1.25rem 0 2rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.95rem;
+      }
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1>Serrekunda Tailoring Shop</h1>
+        <p>
+          We make custom suits and traditional wear, and we do dress
+          alterations, repairs and mending, in Serrekunda, The Gambia.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section aria-labelledby="about-h">
+        <h2 id="about-h">About us</h2>
+        <p>Our shop in Serrekunda has been open since 1985.</p>
+        <!-- Written as "since 1985" rather than a number of years, so it never needs updating. -->
+        <!-- TODO: add a photo of the shop in this section once the tailor supplies one, with alt text that describes what the photo shows. -->
+      </section>
+
+      <section aria-labelledby="services-h">
+        <h2 id="services-h">Our services</h2>
+        <p>These are the jobs we take on.</p>
+        <ul>
+          <li>Custom suits</li>
+          <li>Dress alterations</li>
+          <li>Traditional wear</li>
+          <li>Repairs and mending</li>
+        </ul>
+        <!-- TODO: add a prices table after this list once the tailor supplies amounts. Write every amount in Gambian dalasi, for example D1,500, and never a dollar sign. No prices are shown until then, because a wrong price is worse than none. -->
+      </section>
+
+      <!-- The deposit section comes before opening hours and contact so a customer reads the rule before they decide to order. -->
+      <section aria-labelledby="deposit-h">
+        <h2 id="deposit-h">Deposit</h2>
+        <p>Custom orders need a deposit before we start work.</p>
+        <p class="warning">
+          <strong
+            >A 50% deposit is required on every custom order and cannot be
+            refunded.</strong
+          >
+        </p>
+      </section>
+
+      <section aria-labelledby="hours-h">
+        <h2 id="hours-h">Opening hours</h2>
+        <p>You can visit the shop on these days.</p>
+        <ul>
+          <li>Monday to Friday: 9:00 am to 5:00 pm</li>
+          <li><strong>Closed on Saturday and Sunday</strong></li>
+        </ul>
+        <!-- TODO: ask the tailor which day matters most for trade and whether the shop closes for any part of it, then add that line here. Nothing is stated about it now because it was not supplied. -->
+      </section>
+
+      <section aria-labelledby="contact-h">
+        <h2 id="contact-h">Contact</h2>
+        <p>Visit us in Serrekunda during opening hours.</p>
+        <!-- TODO: add the shop's real phone number as <a href="tel:+220..."> and its street address. No contact details were supplied, so none are invented here. -->
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>Serrekunda Tailoring Shop, Serrekunda, The Gambia.</p>
+      </div>
+    </footer>
+  </body>
+</html>
