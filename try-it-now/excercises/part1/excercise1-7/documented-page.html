@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yakar Football School of Excellence: how to join</title>
+    <meta
+      name="description"
+      content="Yakar Football School of Excellence is a community football school in the Gambia. Find out who can join and how to apply as a player or coach."
+    />
+    <!--
+      Maintainer notes. Read these before editing anything.
+      Only facts the club has confirmed are on this page. Anything still unknown is a TODO
+      comment, not a guess, because a wrong training time or phone number sends real people
+      to the wrong place. Do not fill a gap with something that sounds plausible.
+    -->
+    <style>
+      /* System fonts only: most visitors will open this on mobile data, so nothing external loads. */
+      :root {
+        /* Red, blue and white match the club's matchday flyer. Change them there and here together. */
+        --blue: #0b2f6b;
+        --red: #c8102e;
+        --ink: #1a2238;
+        --paper: #f6f7fb;
+        --line: #d5daea;
+        /* White on --blue is 12.9:1 and white on --red is 5.9:1; keep any new colours above 4.5:1. */
+        box-sizing: border-box;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          Arial,
+          sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .wrap {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
+      header.hero {
+        background: var(--blue);
+        color: #fff;
+        padding: 3rem 0 2.5rem;
+        border-bottom: 8px solid var(--red);
+      }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.2rem);
+        line-height: 1.1;
+        margin: 0 0 1rem;
+      }
+      h2 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+        margin: 0 0 0.6rem;
+        color: var(--blue);
+      }
+      h3 {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0.4rem;
+      }
+      p {
+        margin: 0 0 1rem;
+        max-width: 62ch;
+      }
+      section {
+        padding: 2.5rem 0 0.5rem;
+      }
+      .intro {
+        font-size: 1.2rem;
+        max-width: 56ch;
+        margin: 0;
+      }
+      ul,
+      ol {
+        max-width: 62ch;
+        margin: 0 0 1rem;
+        padding-left: 1.4rem;
+      }
+      li {
+        margin-bottom: 0.4rem;
+      }
+      ol.steps {
+        list-style: none;
+        counter-reset: s;
+        padding: 0;
+      }
+      ol.steps > li {
+        counter-increment: s;
+        position: relative;
+        padding-left: 2.8rem;
+        margin-bottom: 0.9rem;
+      }
+      ol.steps > li::before {
+        content: counter(s);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: var(--red);
+        color: #fff;
+        font-weight: 700;
+        display: grid;
+        place-items: center;
+      }
+      .button {
+        display: inline-block;
+        background: var(--red);
+        color: #fff;
+        font-weight: 700;
+        padding: 0.7rem 1.2rem;
+        border-radius: 6px;
+        text-decoration: none;
+        margin: 0 0.5rem 0.5rem 0;
+      }
+      .button:focus-visible,
+      a:focus-visible {
+        outline: 3px solid var(--blue);
+        outline-offset: 3px;
+      }
+      footer {
+        margin-top: 3rem;
+        padding: 1.5rem 0 2.5rem;
+        border-top: 1px solid var(--line);
+        color: #4a5370;
+        font-size: 0.95rem;
+      }
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header. Kept to a title and one paragraph so the page's purpose is clear before anyone scrolls. -->
+    <header class="hero">
+      <div class="wrap">
+        <h1>Yakar Football School of Excellence</h1>
+        <p class="intro">
+          Yakar FSE is a community football school in the Gambia. This page
+          explains who can join and how to apply, whether you want to play or to
+          coach.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- About section. Deliberately short: most visitors arrive to apply, so "How to apply" comes straight after it. -->
+      <section aria-labelledby="about-h">
+        <h2 id="about-h">About the school</h2>
+        <p>
+          Yakar FSE gives young players a structured place to train and grow,
+          and it works with the wider community through local football. In July
+          and August 2026 the club took part in a ten-team community tournament,
+          with its opening match at the Abuko Primary School field.
+        </p>
+        <!-- TODO: after the next season or tournament, replace the sentence about July and August 2026 with the latest result or event. It will read as out of date after that. -->
+      </section>
+
+      <!-- Apply section. The two audiences get separate h3 blocks because their requirements differ and a visitor should read only their own. -->
+      <section aria-labelledby="apply-h">
+        <h2 id="apply-h">How to apply</h2>
+        <p>
+          Players and coaches apply separately. Choose the group that matches
+          you and follow the steps in order.
+        </p>
+
+        <h3>If you are a player</h3>
+        <p>
+          Applications are made online, and a parent or guardian should help any
+          player who is a child.
+        </p>
+        <!-- ol, not ul: the club cannot invite someone to a session before the form is in, so the order is a rule, not a preference. -->
+        <ol class="steps">
+          <li>Open the player application form.</li>
+          <li>
+            Fill in every question with your full name, age and playing
+            position.
+          </li>
+          <li>Submit the form, then wait for the club to contact you.</li>
+        </ol>
+        <!-- TODO: replace this href="#" with the live player application URL once the registration page on the club website is published. A "#" link scrolls to the top and looks broken, so do not publish with it. -->
+        <p><a class="button" href="#">Player application</a></p>
+
+        <h3>If you are a coach</h3>
+        <p>
+          Coaches apply through a separate form so the club can review
+          experience and qualifications.
+        </p>
+        <ol class="steps">
+          <li>Open the coach application form.</li>
+          <li>
+            Describe the teams you have coached and any coaching qualifications
+            you hold.
+          </li>
+          <li>Submit the form, then wait for the
